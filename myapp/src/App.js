@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Ninjas from './Ninjas';
 
 class App extends Component {
+    state = {
+        ninjas: [
+            {name: "Heteki", age: 28, clan: "Red Pet", id: 1 },
+            {name: "Goru", age: 32, clan: "Deep Cave", id: 2 }
+        ]
+    };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h3>Ninjas</h3>
+        <p>List of ninjas</p>
+        <Ninjas ninjas = {this.state.ninjas}/>
       </div>
     );
   }
