@@ -1,12 +1,21 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@media only screen and (max-width: 992px) {
+  nav .brand-logo{
+   left: 20%;
+  }
 }
-.collection-item.pointer {
-  cursor: pointer;
+ul a.active{
+    text-decoration: underline;
 }
-.pointer :hover{
-  background-color: rgba(20,150,30,0.1) !important;
+
+.home .post img{
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    opacity: 0.1;
 }
+.home .post{
+    overflow: hidden;
+    padding-left: 50px;
+}
+
 
