@@ -4,5 +4,14 @@ body {
   font-family: sans-serif;
 }
 .form{
-  width: 400px;
+  padding-top: 25px;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ninja{
+  border: 1px solid black;
+
 }

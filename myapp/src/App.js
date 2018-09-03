@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Ninjas from './Ninjas_2';
+import Ninjas from './Ninjas';
 import AddNinja from './AddNinja';
 
 class App extends Component {
@@ -15,12 +15,27 @@ class App extends Component {
             ninjas: ninjas
         })
     };
+    deleteNinja = (id) => {
+        let ninjas = this.state.ninjas.filter(ninja => {
+           return ninja.id !== id;
+        });
+        this.setState({
+            ninjas: ninjas
+        })
+    };
+    componentDidMount(){
+      console.log('component mounting');
+    };
+    componentDidUpdate(prevProps, prevState){
+        console.log(prevProps);
+        console.log(prevState);
+    };
     render() {
         return (
           <div className="App">
               <h3>Ninjas</h3>
               <p>List of ninjas</p>
-              <Ninjas ninjas = {this.state.ninjas}/>
+              <Ninjas deleteNinja = {this.deleteNinja} ninjas = {this.state.ninjas}/>
               <AddNinja addNinja = {this.addNinja}/>
           </div>
         );

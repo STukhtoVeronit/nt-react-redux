@@ -5,7 +5,7 @@ class AddNinja extends Component {
         name: null,
         age: null,
         belt: null,
-        id: Math.random()
+        id: Math.round(Math.random()*10000)
     };
 
     handleChange = (e) =>{
@@ -23,12 +23,15 @@ class AddNinja extends Component {
         return (
             <div>
                 <form className='form' onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" onChange={this.handleChange}/>
-                    <label htmlFor="age">Age:</label>
-                    <input type="text" id="age" onChange={this.handleChange}/>
-                    <label htmlFor="clan">Clan:</label>
-                    <input type="text" id="clan" onChange={this.handleChange}/>
+                    <label htmlFor="name">Name:
+                        <input type="text" id="name" onChange={this.handleChange}/>
+                    </label>
+                    <label htmlFor="age">Age:
+                        <input type="text" id="age" onChange={this.handleChange}/>
+                    </label>
+                    <label htmlFor="clan">Clan:
+                        <input type="text" id="clan" onChange={this.handleChange}/>
+                    </label>
                     <input type="submit" value="add"/>
                 </form>
             </div>
